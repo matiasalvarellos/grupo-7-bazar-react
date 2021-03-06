@@ -9,7 +9,9 @@ function Sidebar() {
                 </div>
                 <div className="sidebar-brand-text mx-3">Admin</div>
             </a>
+
             <hr className="sidebar-divider my-0"/>
+            
 			<li className="nav-item active">
                     <a className="nav-link" href="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
@@ -19,22 +21,25 @@ function Sidebar() {
 			<div className="sidebar-heading">Actions</div>
 
 			<li className="nav-item">
-                        <a className="nav-link collapsed" href="/">
-                            <i className="fas fa-fw fa-folder"></i>
-                            <span>Pages</span>
-                        </a>
-                    </li>
-			<li className="nav-item">
-                        <a className="nav-link" href="/">
-                            <i className="fas fa-fw fa-chart-area"></i>
-                            <span>Charts</span></a>
-                    </li>
+                <a className="nav-link collapsed" href="http://localhost:3001/">
+                    <i className="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
 
 			<li className="nav-item">
-                        <a className="nav-link" href="/">
-                            <i className="fas fa-fw fa-table"></i>
-                            <span>Tables</span></a>
-                    </li>
+                <a className="nav-link" href="/">
+                    <i className="fas fa-fw fa-chart-area"></i>
+                    <span>Charts</span>
+                </a>
+            </li>
+
+			<li className="nav-item">
+                <a className="nav-link" href="http://localhost:3001/productos/">
+                    <i className="fas fa-fw fa-table"></i>
+                    <span>Products</span>
+                </a>
+            </li>
 
 			<hr className="sidebar-divider d-none d-md-block" />
 		</ul>
