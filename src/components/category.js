@@ -5,14 +5,15 @@ function Category(){
     let [categories, setCategories] = useState([{name:"Ninguna Categoria"}]);
 
     useEffect(()=>{
-        fetch("http://localhost:3001/api/categories")
+        fetch("http://localhost:3001/api/subcategories")
         .then(res => res.json())
         .then(data => {
-            let array = data.data
-            setCategories(array)
+            setCategories(data.meta.quantityProducts)
         })
 
     },[])
+
+
 
     return (
         <div className="col-lg-6 mb-4">
@@ -23,7 +24,7 @@ function Category(){
                 <div className="card-body">
                     <div className="row">
                         { categories.map((category, i) =>
-                            <CardCategory key={i} nameCategory={category.name} />)
+                            <CardCategory key={i} nameCategory={category.name} quantity={category.count} />)
                         }
                     </div>
                 </div>
